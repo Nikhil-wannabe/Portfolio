@@ -11,18 +11,24 @@ The portfolio is built with a focus on futuristic and elegant UI/UX, incorporati
 
 This project leverages a modern, creative front-end stack:
 
-*   **Framework:** [Next.js](https://nextjs.org/) (v13+ with App Router)
-*   **Language:** [TypeScript](https://www.typescriptlang.org/)
-*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-*   **Animation:** [Framer Motion](https://www.framer.com/motion/)
-*   **3D Graphics:** [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) & [Drei](https://github.com/pmndrs/drei) (for Three.js integration in React)
-*   **Theming:** [next-themes](https://github.com/pacocoursey/next-themes) (for Dark/Light mode)
-*   **Icons:** [React Icons](https://react-icons.github.io/react-icons/) (for social media and UI icons), [@heroicons/react](https://heroicons.com/)
+*   **Framework:** [Next.js](https://nextjs.org/) (v14.2.3 with App Router)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/) (v5)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/) (v3.4.1)
+    *   With [PostCSS](https://postcss.org/) (v8) and [autoprefixer](https://github.com/postcss/autoprefixer) (v10.4.19)
+*   **Animation:** [Framer Motion](https://www.framer.com/motion/) (v11.0.24)
+*   **3D Graphics:**
+    *   [Three.js](https://threejs.org/) (v0.163.0)
+    *   [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) (v8.16.0) for Three.js integration in React
+    *   [Drei](https://github.com/pmndrs/drei) (v9.102.0) - Helper utilities for React Three Fiber
+    *   `@types/three` (v0.163.0) for TypeScript support
+*   **Theming (Dark/Light Mode):** [next-themes](https://github.com/pacocoursey/next-themes) (v0.3.0)
+*   **Icons:**
+    *   [React Icons](https://react-icons.github.io/react-icons/) (v5.5.0)
+    *   [@heroicons/react](https://heroicons.com/) (v2.2.0)
+*   **Linting:** [ESLint](https://eslint.org/) (v8) with `eslint-config-next` (v14.2.3)
 *   **Version Control:** Git & GitHub
 *   **CI/CD:** GitHub Actions (for build checks)
 *   **Deployment (Planned):** Vercel
-
-
 
 ## Project Structure
 
@@ -67,7 +73,7 @@ Key directories and files:
     *   **`src/app/page.tsx`**: The main entry point for the homepage content, where different sections/components are assembled.
     *   **`src/app/layout.tsx`**: The root layout for the application, including HTML structure, theme providers, and global components like the animated cursor and theme toggle.
 *   **`public/`**: (Not explicitly shown but standard) For static assets like images or 3D models (if not served from elsewhere).
-*   **Configuration Files**: Standard Next.js, TypeScript, and Tailwind CSS config files (`next.config.mjs`, `tsconfig.json`, `tailwind.config.ts`).
+    *   **Configuration Files**: Standard Next.js (`next.config.mjs`), TypeScript (`tsconfig.json`), Tailwind CSS (`tailwind.config.ts`), and PostCSS (`postcss.config.js`) config files are present to manage the build and development environment.
 
 
 
