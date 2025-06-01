@@ -2,12 +2,13 @@
 
 import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Box, TorusKnot } from '@react-three/drei';
+import { OrbitControls, TorusKnot } from '@react-three/drei';
+import * as THREE from 'three'; // Explicitly import THREE
 
 const RotatingTorusKnot = () => {
-  const meshRef = useRef<THREE.Mesh>(null!);
+  const meshRef = useRef<THREE.Mesh>(null!); // Now THREE.Mesh should be recognized
   const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false); // This state is set but not used, can be removed or used later
+  const [active, setActive] = useState(false);
 
   useFrame((state, delta) => {
     if (meshRef.current) {
@@ -19,7 +20,7 @@ const RotatingTorusKnot = () => {
   return (
     <TorusKnot
       ref={meshRef}
-      args={[1, 0.3, 128, 16]} // args: radius, tube, tubularSegments, radialSegments
+      args={[1, 0.3, 128, 16]}
       scale={hovered ? 1.1 : 1}
       onClick={() => setActive(!active)}
       onPointerOver={() => setHover(true)}
@@ -37,7 +38,7 @@ const RotatingTorusKnot = () => {
 
 const Interactive3DObject = () => {
   return (
-    <div className='w-full h-64 md:h-80 lg:h-96 my-8'> {/* Container for the canvas */}
+    <div className='w-full h-64 md:h-80 lg:h-96 my-8'>
       <Canvas camera={{ position: [0, 0, 3.5], fov: 50 }}>
         <ambientLight intensity={Math.PI / 2} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
