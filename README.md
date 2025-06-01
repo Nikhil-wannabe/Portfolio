@@ -90,33 +90,31 @@ In the project directory, you can run the following commands:
 *   **`npm run lint`**
     Runs ESLint to check for code quality and style issues.
 
-
-
 ## Setup and Installation
 
 To get a local copy up and running, follow these simple steps:
 
 1.  **Clone the repository:**
-    \`\`\`bash
-    git clone https://github.com/<YourGitHubUsername>/<YourRepositoryName>.git # Replace with actual repo URL
-    cd <YourRepositoryName>
-    \`\`\`
+    ```bash
+    git clone https://github.com/NikhilBramhandam/Portfolio-NextJS-tailwind.git # Replace with your actual repo URL if different
+    cd Portfolio-NextJS-tailwind # Replace with your repository directory name
+    ```
 
 2.  **Install NPM packages:**
+    This project uses Node.js and npm for dependency management. Dependencies are listed in the `package.json` file.
     Make sure you have Node.js and npm installed. Then run:
-    \`\`\`bash
+    ```bash
     npm install
-    \`\`\`
-    This command installs all the necessary dependencies defined in `package.json`.
+    ```
+    This command installs all the necessary dependencies.
 
 3.  **Run the development server:**
-    \`\`\`bash
+    ```bash
     npm run dev
-    \`\`\`
+    ```
     This will start the development server, usually on `http://localhost:3000`.
 
 4.  Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
-
 
 ## Key Features Implemented
 
